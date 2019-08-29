@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100 page-header justify-content-center align-items-center">
+            <h1>Log in</h1>
+        </div>
+        <div class="row h-100 justify-content-center align-items-center">
+            {#<form action="" method="post" class="form col-6" role="form">
+                {{ form.csrf_token }}
+            {{ render_field(form.username, extra_classes='col-6') }}
+            {{ render_field(form.password, extra_classes='col-6') }}
+
+    <div class="g-recaptcha" data-sitekey="6LezarMUAAAAAHpNduHUdxEajn8bxtSpb-w3Tpw7"></div>
+            {{ render_field(form.remember, extra_classes='col-6') }}
+            {{ render_field(form.submit, extra_classes='col-6') }}
+
+            </form>#}
+           {{ render_form(form,extra_classes='col-6') }}
+        </div>
+
+
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
